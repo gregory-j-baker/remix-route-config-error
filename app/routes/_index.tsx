@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { routes } from "~/routes";
 
 export const meta: MetaFunction = () => {
   return [
@@ -48,6 +49,7 @@ export default function Index() {
             ))}
           </ul>
         </nav>
+        <pre>{JSON.stringify(routes, null, 2)}</pre>
       </div>
     </div>
   );
